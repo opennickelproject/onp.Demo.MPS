@@ -1,29 +1,28 @@
 metadata:
-  pattern-id: onp.base.template
-  pattern-name: base-template
   organisation-id: onp
+  pattern-categories:
+  - Application
+  pattern-description: This is the MPS microservices workload used to demo the capabilities of NickelCloud. This workload implements an application and uses multiple patterns underneath.
+  pattern-id: onp.mps.workload
+  pattern-name: mps-workload
   pattern-version: 1.0.0
-  pattern-description: some description here
-  pattern-categories: 
-              - bootstrap
-
+dependencies:
+  - pattern-id: onp.aws.network.model.simplevpc
+    version: 1.0.6
+  - pattern-id: onp.aws.bootstrap.deployment.fargate-dynamodb
+    version: 1.0.1
+  - pattern-id: onp.aws.bootstrap.deployment.deploymentbucket
+    version: 1.0.0
 lifecycle:
   create:
     commands:
-      - bash lifecycle/create.sh
-
+    - bash lifecycle/create.sh
   delete:
     commands:
-      - bash lifecycle/delete.sh
-
+    - bash lifecycle/delete.sh
   update:
     commands:
-      - bash lifecycle/update.sh
-
+    - bash lifecycle/update.sh
   upgrade:
     commands:
-      - bash lifecycle/upgrade.sh
-
-dependencies:
-
-
+    - bash lifecycle/upgrade.sh
