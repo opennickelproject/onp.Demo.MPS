@@ -1,3 +1,3 @@
-# onp.base.template
+# onp.mps.workload
 
 [The detailed documentation](docs/documentation.md)
