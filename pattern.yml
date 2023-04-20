@@ -1,18 +1,10 @@
-metadata:
-  organisation-id: onp
-  pattern-categories:
-  - Application
-  pattern-description: This is the MPS microservices workload used to demo the capabilities of NickelCloud. This workload implements an application and uses multiple patterns underneath.
-  pattern-id: onp.mps.workload
-  pattern-name: mps-workload
-  pattern-version: 1.0.0
 dependencies:
-  - pattern-id: onp.aws.network.model.simplevpc
-    version: 1.0.6
-  - pattern-id: onp.aws.bootstrap.deployment.fargate-dynamodb
-    version: 1.0.1
-  - pattern-id: onp.aws.bootstrap.deployment.deploymentbucket
-    version: 1.0.0
+- pattern-id: onp.aws.network.model.simplevpc
+  version: 1.0.6
+- pattern-id: onp.aws.bootstrap.deployment.fargate-dynamodb
+  version: 1.0.1
+- pattern-id: onp.aws.bootstrap.deployment.deploymentbucket
+  version: 1.0.0
 lifecycle:
   create:
     commands:
@@ -26,3 +18,11 @@ lifecycle:
   upgrade:
     commands:
     - bash lifecycle/upgrade.sh
+metadata:
+  organisation-id: onp
+  pattern-categories:
+  - Application
+  pattern-description: Demo MPS Pattern
+  pattern-id: onp.Demo.MPS
+  pattern-name: Demo MPS
+  pattern-version: 1.0.0
